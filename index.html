@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" >
+    <title>标签组件</title>
+</head>
+<body>
+    <div id="app" v-cloak>
+        <tabs v-model="activeKey">
+            <pane label="label1" name="1">
+                阿啊
+            </pane>
+            <pane label="label2" name="2">
+                试试
+            </pane>
+            <pane label="label3" name="3">
+                懂点
+            </pane>
+        </tabs>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+    <script src="pane.js"></script>
+    <script src="tabs.js"></script>
+    <script type="text/javascript">
+        var app = new Vue({
+            el:'#app',
+            data:{
+                activeKey:'1'
+            }
+        })
+    </script>
+</body>
+</html>
