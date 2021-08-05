@@ -2,7 +2,7 @@ Vue.component('tabs',{
     template:`
             <div class="tabs">
                 <div class = "tabs-bar">
-                    <div :class"tabCls(item)" v-for="(item,index) in navList" @click="handleChange(index)">
+                    <div  v-for="(item,index) in navList" :class="tabCls(item)" @click="handleChange(index)">
                         {{item.label}}
                     </div>
                 </div>
